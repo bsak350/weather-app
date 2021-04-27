@@ -26,6 +26,24 @@ let now = new Date();
 let currentTime = document.querySelector("#date-time");
 currentTime.innerHTML = showTime(now);
 
+function searchCity(city) {
+  let apiKey = "633a901d15239b95c1fd6a7642839e6b";
+  let units = "imperial";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
+
+  axios.get(apiUrl).then(showWeather);
+}
+
+function getCurrentLocation(position) {
+  let apiKey = "633a901d15239b95c1fd6a7642839e6b";
+  let units = "imperial";
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
+
+  axios.get(apiUrl).then(showWeather);
+}
+
 function showWeather(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temp");
@@ -51,12 +69,9 @@ function showWeather(response) {
   iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
-function searchCity(city) {
-  let apiKey = "633a901d15239b95c1fd6a7642839e6b";
-  let units = "imperial";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
-
-  axios.get(apiUrl).then(showWeather);
+function getGPS(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(getCurrentLocation);
 }
 
 function handleSubmit(event) {
@@ -86,6 +101,9 @@ let fahrenheitTemp = null;
 
 let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", handleSubmit);
+
+let currentButton = document.querySelector("button");
+currentButton.addEventListener("click", getGPS);
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click", showFahrenheitTemp);
