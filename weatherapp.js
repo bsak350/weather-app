@@ -29,11 +29,22 @@ currentTime.innerHTML = showTime(now);
 function showWeather(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temp");
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
+
   let temperature = Math.round(response.data.main.temp);
   let city = response.data.name;
 
+  fahrenheitTemp = response.data.main.temp;
+
   cityElement.innerHTML = city;
   temperatureElement.innerHTML = temperature;
+  descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
+  iconElement.setAttribute("#icon", response.data.weather[0].icon);
 }
 
 function searchCity(city) {
@@ -46,28 +57,34 @@ function searchCity(city) {
 
 function handleSubmit(event) {
   event.preventDefault();
-  let city = document.querySelector("#city-search").value;
-  searchCity(city);
+  let city = document.querySelector("#city-search");
+  searchCity(city.value);
 }
+
+function showCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+
+  let celsiusTemp = (fahrenheitTemp - 32) * (5 / 9);
+  temperatureElement.innerHTML = Math.round(celsiusTemp);
+}
+
+function showFahrenheitTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temp");
+
+  temperatureElement.innerHTML = Math.round(fahrenheitTemp);
+}
+
+let fahrenheitTemp = null;
 
 let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", handleSubmit);
 
+let fahrenheitLink = document.querySelector("#fahrenheit");
+fahrenheitLink.addEventListener("click", showFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click", showCelsiusTemp);
+
 searchCity("Las Vegas");
-
-function retrievePosition(position) {
-  let apiKey = "633a901d15239b95c1fd6a7642839e6b";
-  let units = "imperial";
-  let lat = position.coords.latitude;
-  let lon = position.coords.longitude;
-  let url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=${units}&appid=${apiKey}`;
-
-  axios.get(url).then(showWeather);
-}
-
-function showGPS(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(retrievePosition);
-}
-let currentButton = document.querySelector("#current-location");
-currentButton.addEventListener("click", showGPS);
