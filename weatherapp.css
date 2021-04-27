@@ -42,11 +42,21 @@ img {
   margin: 20px auto;
 }
 
-.active {
+.tempF {
   cursor: default;
 }
 
-.active:hover {
+.tempC {
+  cursor: default;
+}
+
+.tempF:hover {
+  text-decoration: none;
+  color: rgb(140, 28, 192);
+  cursor: pointer;
+}
+
+.tempC:hover {
   text-decoration: none;
   color: rgb(140, 28, 192);
   cursor: pointer;
