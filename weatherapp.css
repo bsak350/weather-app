@@ -1,4 +1,4 @@
-h1 {
+.header {
   color: white;
   font-family: "Zen Dots", cursive;
   text-align: center;
@@ -29,7 +29,7 @@ ul {
   text-align: left;
   text-transform: capitalize;
   position: relative;
-  bottom: 50px;
+  bottom: 68px;
 }
 
 img {
@@ -54,5 +54,5 @@ img {
 
 .col-8 {
   position: relative;
-  bottom: 60px;
+  bottom: 70px;
 }
