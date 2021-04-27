@@ -83,8 +83,8 @@ function handleSubmit(event) {
 function showCelsiusTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
+  celsiusLink.classList.add("tempC");
+  fahrenheitLink.classList.remove("tempF");
   let celsiusTemp = (fahrenheitTemp - 32) * (5 / 9);
   temperatureElement.innerHTML = Math.round(celsiusTemp);
 }
@@ -92,8 +92,8 @@ function showCelsiusTemp(event) {
 function showFahrenheitTemp(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#temp");
-  fahrenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("tempF");
+  celsiusLink.classList.remove("tempC");
   temperatureElement.innerHTML = Math.round(fahrenheitTemp);
 }
 
