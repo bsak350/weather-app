@@ -35,3 +35,14 @@ ul {
   max-width: 900px;
   margin: 20px auto;
 }
+
+.active {
+  cursor: default;
+  color: ;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: rgb(140, 28, 192);
+  cursor: pointer;
+}
