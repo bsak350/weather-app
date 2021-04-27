@@ -24,11 +24,17 @@ p {
 
 ul {
   list-style: none;
-  font-size: 24px;
-  color: rgb(140, 28, 192);
+  font-size: 20px;
+  color: rgb(136, 17, 160);
   text-align: left;
-  margin: 0;
   text-transform: capitalize;
+  position: relative;
+  bottom: 50px;
+}
+
+img {
+  position: relative;
+  top: -24px;
 }
 
 .container {
@@ -44,4 +50,9 @@ ul {
   text-decoration: none;
   color: rgb(140, 28, 192);
   cursor: pointer;
+}
+
+.col-8 {
+  position: relative;
+  bottom: 60px;
 }
