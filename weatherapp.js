@@ -155,19 +155,11 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
-let fahrenheitTemp = null;
-
 let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", handleSubmit);
 
 let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", getGPS);
-
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", showFahrenheitTemp);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", showCelsiusTemp);
 
 searchCity("Las Vegas");
 
