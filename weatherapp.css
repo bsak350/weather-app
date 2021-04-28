@@ -62,12 +62,12 @@ img {
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
-  color: rgb(136, 17, 160);
+  color: rgb(27, 178, 168);
   font-size: 20px;
 }
 
 .weather-forecast-temperature-max {
-  color: rgb(136, 17, 160);
+  color: rgb(27, 178, 168);
   font-size: 20px;
 }
 
