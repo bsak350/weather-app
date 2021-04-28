@@ -42,26 +42,6 @@ img {
   margin: 20px auto;
 }
 
-.tempF {
-  cursor: default;
-}
-
-.tempC {
-  cursor: default;
-}
-
-.tempF:hover {
-  text-decoration: none;
-  color: rgb(140, 28, 192);
-  cursor: pointer;
-}
-
-.tempC:hover {
-  text-decoration: none;
-  color: rgb(140, 28, 192);
-  cursor: pointer;
-}
-
 .col-8 {
   position: relative;
   bottom: 70px;
