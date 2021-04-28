@@ -50,18 +50,25 @@ img {
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  color: rgb(136, 17, 160);
 }
 
 .weather-forecast-date {
-  font-size: 16px;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(13, 109, 253);
 }
 
 .weather-forecast-temperature-min {
   opacity: 0.5;
+  color: rgb(136, 17, 160);
+  font-size: 20px;
 }
 
-.weather-forecast-temperature {
-  font-size: 13px;
+.weather-forecast-temperature-max {
+  color: rgb(136, 17, 160);
+  font-size: 20px;
 }
 
 .weather-forecast img {
