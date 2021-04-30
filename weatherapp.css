@@ -42,6 +42,7 @@ img {
   background: rgb(140, 202, 241);
   border-radius: 2px solid rgb(140, 202, 241);
   border-radius: 2px;
+  padding: 20px;
 }
 
 .col-8 {
