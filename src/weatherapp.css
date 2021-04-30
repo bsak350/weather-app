@@ -65,6 +65,7 @@ img {
 .weather-forecast-temperature-min {
   color: rgb(136, 17, 160);
   font-size: 24px;
+  font-weight: bold;
 }
 
 .weather-forecast-temperature-max {
