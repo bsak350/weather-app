@@ -44,13 +44,6 @@ function getCurrentLocation(position) {
   axios.get(apiUrl).then(showWeather);
 }
 
-function getForecast(coordinates) {
-  console.log(coordinates);
-  let apiKey = "633a901d15239b95c1fd6a7642839e6b";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
-  axios.get(apiUrl).then(displayForecast);
-}
-
 function showWeather(response) {
   let cityElement = document.querySelector("#city");
   let temperatureElement = document.querySelector("#temp");
@@ -117,7 +110,6 @@ function formatDay(timestamp) {
 
 function displayForecast(response) {
   let forecast = response.data.daily;
-
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -155,6 +147,12 @@ function displayForecast(response) {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "633a901d15239b95c1fd6a7642839e6b";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=imperial`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 let searchForm = document.querySelector("form");
 searchForm.addEventListener("submit", handleSubmit);
 
@@ -162,5 +160,3 @@ let currentButton = document.querySelector("button");
 currentButton.addEventListener("click", getGPS);
 
 searchCity("Las Vegas");
-
-displayForecast();
