@@ -1,0 +1,79 @@
+.header {
+  color: darkblue;
+  font-family: "Zen Dots", cursive;
+  text-align: center;
+  padding: 50px 10px;
+}
+
+h2 {
+  color: darkblue;
+  font-size: 30px;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 200px;
+}
+
+p {
+  text-align: center;
+  margin-top: 120px;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+ul {
+  list-style: none;
+  font-size: 22px;
+  color: rgb(136, 17, 160);
+  text-align: left;
+  text-transform: capitalize;
+  position: relative;
+  bottom: 68px;
+}
+
+img {
+  position: relative;
+  top: -24px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: rgb(140, 202, 241);
+  border-radius: 2px solid rgb(140, 202, 241);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.col-8 {
+  position: relative;
+  bottom: 70px;
+}
+
+.weather-forecast {
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  padding: 10px;
+}
+
+.weather-forecast-date {
+  font-size: 24px;
+  font-weight: bold;
+  color: darkblue;
+}
+
+.weather-forecast-temperature-min {
+  color: rgb(136, 17, 160);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.weather-forecast-temperature-max {
+  color: darkblue;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.weather-forecast img {
+  margin-top: 30px;
+}
