@@ -83,12 +83,12 @@ img {
     margin-top: 20px;
   }
 
-  img {
-    display: none;
-  }
-
   h2 {
     margin: 0;
+  }
+
+  .clearfix {
+    text-align: center;
   }
 
   ul {
@@ -102,7 +102,6 @@ img {
   }
 
   .temp {
-    margin-top: 5px;
     margin-bottom: 30px;
     text-align: center;
   }
@@ -111,5 +110,9 @@ img {
     margin-top: 50px;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  .footer {
+    padding: 10px;
   }
 }
