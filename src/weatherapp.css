@@ -37,7 +37,7 @@ img {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 800px;
   margin: 20px auto;
   background: rgb(140, 202, 241);
   border-radius: 2px solid rgb(140, 202, 241);
@@ -45,7 +45,7 @@ img {
   padding: 20px;
 }
 
-.col-8 {
+.col-md-8 {
   position: relative;
   bottom: 70px;
 }
@@ -76,4 +76,40 @@ img {
 
 .weather-forecast img {
   margin-top: 30px;
+}
+
+@media (max-width: 560px) {
+  button {
+    margin-top: 20px;
+  }
+
+  img {
+    display: none;
+  }
+
+  h2 {
+    margin: 0;
+  }
+
+  ul {
+    margin: 0;
+    text-align: center;
+  }
+
+  .city {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+
+  .temp {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  .date-time {
+    margin-top: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
 }
