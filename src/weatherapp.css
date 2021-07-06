@@ -116,6 +116,14 @@ img {
     text-align: center;
   }
 
+  .weather-forecast-date {
+    margin-top: 10px;
+  }
+
+  .weather-forecast-temperatures {
+    margin-bottom: 20px;
+  }
+
   .footer {
     padding: 10px;
   }
